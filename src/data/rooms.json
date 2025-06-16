@@ -1,0 +1,146 @@
+[
+  {
+    "title": "Luxury Double",
+    "size": "1,500 sq ft / 80 sq m",
+    "capacity": "2 persons",
+    "bed": "1 King Size Bed",
+    "view": "Hills view",
+    "facilities": [
+      "King Size Bed",
+      "Private Swimming Pool",
+      "High-speed Wifi",
+      "Air conditioning",
+      "LCD television",
+      "Speaker system",
+      "Tea and coffee",
+      "Minibar"
+    ],
+    "image": "/images/Luxury-double.jpg"
+  },
+  {
+    "title": "Premium Double",
+    "size": "1,500 sq ft / 80 sq m",
+    "capacity": "2 persons",
+    "bed": "1 King Size Bed",
+    "view": "Resort view",
+    "facilities": [
+      "King Size Bed",
+      "Private Swimming Pool",
+      "High-speed Wifi",
+      "Air conditioning",
+      "LCD television",
+      "Speaker system",
+      "Tea and coffee",
+      "Minibar"
+    ],
+    "image": "/images/premium-double.jpg"
+  },
+  {
+    "title": "Deluxe Suite",
+    "size": "1,800 sq ft / 167 sq m",
+    "capacity": "3 persons",
+    "bed": "1 King Size Bed + Sofa Bed",
+    "view": "Ocean view",
+    "facilities": [
+      "Private Balcony",
+      "Jacuzzi",
+      "High-speed Wifi",
+      "Air conditioning",
+      "Smart TV",
+      "Sound system",
+      "Tea and coffee",
+      "Mini fridge"
+    ],
+    "image": "/images/deluxe-suite.jpg"
+  },
+  {
+    "title": "Garden Villa",
+    "size": "2,000 sq ft / 185 sq m",
+    "capacity": "4 persons",
+    "bed": "2 Queen Size Beds",
+    "view": "Garden view",
+    "facilities": [
+      "Garden Access",
+      "Outdoor Shower",
+      "Free Wifi",
+      "Air conditioning",
+      "LCD television",
+      "Tea maker",
+      "Minibar",
+      "Work Desk"
+    ],
+    "image": "/images/garden-villa.jpg"
+  },
+  {
+    "title": "Skyline Penthouse",
+    "size": "2,500 sq ft / 232 sq m",
+    "capacity": "2 persons",
+    "bed": "1 King Size Bed",
+    "view": "City skyline",
+    "facilities": [
+      "Private Terrace",
+      "Panoramic Windows",
+      "Fast Wifi",
+      "Air conditioning",
+      "Home Theater",
+      "Espresso Machine",
+      "Minibar",
+      "Bathtub"
+    ],
+    "image": "/images/skyline-penthouse.jpg"
+  },
+  {
+    "title": "Tropical Cottage",
+    "size": "1,200 sq ft / 112 sq m",
+    "capacity": "2 persons",
+    "bed": "1 Queen Size Bed",
+    "view": "Tropical garden",
+    "facilities": [
+      "Private Porch",
+      "Ceiling Fan",
+      "Free Wifi",
+      "Air conditioning",
+      "Smart TV",
+      "Bluetooth Speaker",
+      "Tea and coffee",
+      "Mini fridge"
+    ],
+    "image": "/images/tropical-cottage.jpg"
+  },
+  {
+    "title": "Beachfront Bungalow",
+    "size": "1,600 sq ft / 149 sq m",
+    "capacity": "3 persons",
+    "bed": "1 King Size Bed",
+    "view": "Beach view",
+    "facilities": [
+      "Beach Access",
+      "Sun Loungers",
+      "Wifi",
+      "Air conditioning",
+      "Flat-screen TV",
+      "Outdoor Dining",
+      "Coffee Machine",
+      "Minibar"
+    ],
+    "image": "/images/beachfront-bungalow.jpg"
+  },
+  {
+    "title": "Mountain Cabin",
+    "size": "1,400 sq ft / 130 sq m",
+    "capacity": "2 persons",
+    "bed": "1 King Size Bed",
+    "view": "Mountain view",
+    "facilities": [
+      "Fireplace",
+      "Wood Interior",
+      "High-speed Wifi",
+      "Heater",
+      "Smart TV",
+      "Coffee Maker",
+      "Mini fridge",
+      "Bookshelf"
+    ],
+    "image": "/images/mountain-cabin.jpg"
+  }
+]
