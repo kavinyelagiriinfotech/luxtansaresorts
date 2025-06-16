@@ -6,7 +6,6 @@ import imagesData from '../images.json'
 import regImage from '../assets/regImage.png'
 import roomImage from '../assets/roomImg1.png'
 import { useState } from 'react';
-import images from '../images.json'; 
 import rooms from '../rooms.json'; 
 import { imageMap } from '../components/imageMap';
 import services from '../data/servicesData.json';
@@ -100,19 +99,19 @@ const Homepage = () => {
                 <div className="overlay"></div> 
 
                 <header className="homepage-header">
-                <div className="container">
+                <div className="homepage-container">
                     <div className="logo">
                     <a href="#home" alt="Luxtansa logo"><img src={logo} /></a>
                     </div>
-
                     <nav className={`nav ${sidebarOpen ? 'open' : ''}`}>
                     <a href="#home" onClick={toggleSidebar}>Home</a>
-                    <a href="#roomsandsuits" onClick={toggleSidebar}>Rooms & Suits</a>
+                    <Link to="/roomsandsuits" onClick={toggleSidebar}>
+                        <a href="/roomsandsuits">Rooms & Suits</a>
+                    </Link>
                     <Link to="/services" onClick={toggleSidebar}>
                         <a href="/services" >Services</a>
                     </Link>
                     <a href="#contact" onClick={toggleSidebar}>Contact</a>
-                    {/* <a href="#booknow" className="booking-button" onClick={toggleSidebar}>Book Now</a> */}
                     <Link to="/booking" className="booking-button" onClick={toggleSidebar}>
                         Book Now
                     </Link>
@@ -201,15 +200,15 @@ const Homepage = () => {
             </section>  */}
 
             {/* Rooms & Suits section */}
-            <section className="room-section">
-                <h2 className="room-title">Rooms & Suits</h2>
-                <p className="room-subtitle"> Relaxation sounded by nature</p>
-                <div className="room-carousel">
-                <button className="arrow-button left" onClick={handlePrev}>&larr;</button>
+            <section className="homepage-room-section">
+                <h2 className="homepage-room-title">Rooms & Suits</h2>
+                <p className="homepage-room-subtitle"> Relaxation sounded by nature</p>
+                <div className="homepage-room-carousel">
+                <button className="homepage-arrow-button left" onClick={handlePrev}>&larr;</button>
                 
-                <div className="room-cards">
+                <div className="homepage-room-cards">
                     {visibleRooms.map((room, i) => (
-                    <div className="room-card" key={i}>
+                    <div className="homepage-room-card" key={i}>
                         <img src={imageMap[room.image]} alt={room.title} />
                         <h3>{room.title}</h3>
                         <p><strong>Price:</strong> ${room.price}</p>
@@ -219,7 +218,7 @@ const Homepage = () => {
                     ))}
                 </div>
         
-                <button className="arrow-button right" onClick={handleNext}>&rarr;</button>
+                <button className="homepage-arrow-button right" onClick={handleNext}>&rarr;</button>
                 </div>
             </section>
 
