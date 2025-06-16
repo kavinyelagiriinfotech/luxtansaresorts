@@ -1,8 +1,8 @@
 import React from 'react';
 
 const RoomCard = ({ room, index }) => {
-  const isEven = index % 2 === 0;
-
+  const isEven = index % 2 === 0;    
+// branch testing
   return (
     <div className={`flex flex-col md:flex-row ${!isEven ? 'md:flex-row-reverse' : ''} my-10 items-center`}>
       <div className="md:w-1/2 w-full">
