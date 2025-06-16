@@ -228,10 +228,10 @@ export default function Roomsandsuits() {
             { icon: tv, text: "LCD television" },
             { icon: speaker, text: "Speaker system" },
             { icon: coffee, text: "Tea and coffee" },
-            { icon: bar, text: "Minibar" }
+            { icon: bar, text: "Minibar" }  
           ]
         }
-      ]
+      ]  
     
     },
     {
