@@ -232,7 +232,7 @@ export default function Roomsandsuits() {
           ]
         }
       ]
-
+    
     },
     {
       id: 6,
