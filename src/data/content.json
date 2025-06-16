@@ -1,0 +1,52 @@
+{
+  "sections": [
+    {
+      "id": "dining",
+      "highlight": "HEALTHY AND TRADITIONAL CUISINE",
+      "title": "Dining at Luxtansa",
+      "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.",
+      "button": {
+        "label": "LEARN MORE",
+        "link": "#"
+      },
+      "images": [
+        {
+          "src": "https://pplx-res.cloudinary.com/image/private/user_uploads/74143106/e3df8992-db9b-48ce-ad0e-771cf954aec0/image.jpg",
+          "alt": "Dining at Luxtansa"
+        },
+        {
+          "src": "https://pplx-res.cloudinary.com/image/private/user_uploads/74143106/e3df8992-db9b-48ce-ad0e-771cf954aec0/image.jpg",
+          "alt": "Dining at Luxtansa Drinks"
+        }
+      ]
+    },
+    {
+      "id": "spa",
+      "highlight": "RELAX TO THE SOUND OF THE WATERFALL",
+      "title": "Waterfall Garden Spa",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "features": [
+        "Aromatherapy Facial Treatments",
+        "Body Envelopment Therapies",
+        "Couple Spa Experience",
+        "Relaxing Massages",
+        "Sauna and Steam Room",
+        "..& much more!"
+      ],
+      "button": {
+        "label": "DISCOVER SPA",
+        "link": "#"
+      },
+      "images": [
+        {
+          "src": "https://pplx-res.cloudinary.com/image/private/user_uploads/74143106/fc3fe5ea-8af0-4415-9643-c8932855c706/image.jpg",
+          "alt": "Waterfall Garden Spa"
+        },
+        {
+          "src": "https://pplx-res.cloudinary.com/image/private/user_uploads/74143106/fc3fe5ea-8af0-4415-9643-c8932855c706/image.jpg",
+          "alt": "Spa Treatment"
+        }
+      ]
+    }
+  ]
+}

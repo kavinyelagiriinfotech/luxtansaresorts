@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "Waterfall Garden Spa",
+    "tagline": "Relax to the sound of the waterfall",
+    "description": "Lorem ipsum dolor sit amet...",
+    "features": [
+      "Aromatherapy Facial Treatments",
+      "Body Envelopment Therapies",
+      "Couple Spa Experience",
+      "Relaxing Massages",
+      "Sauna and Steam Room",
+      "..& much more!"
+    ],
+    "button": "Discover Spa",
+    "images": ["spa1.jpg", "spa2.jpg"]
+  },
+  {
+    "id": 2,
+    "title": "Dining at Luxtansa",
+    "tagline": "Healthy and traditional cuisine",
+    "description": "Lorem ipsum dolor sit amet...",
+    "features": [
+      "Aromatherapy Facial Treatments",
+      "Body Envelopment Therapies",
+      "Couple Spa Experience",
+      "Relaxing Massages",
+      "Sauna and Steam Room",
+      "..& much more!"
+    ],
+    "button": "Learn More",
+    "images": ["dining1.jpg", "dining2.jpg"]
+  }
+]

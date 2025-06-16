@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Adventure",
+    "description": "Opportunities for adventure are limitless. Hot air balloon rides, sky diving, quad biking, horse riding and much more",
+    "image": "/images/adventure.jpg"
+  },
+  {
+    "title": "Relax",
+    "description": "Opportunities for adventure are limitless. Hot air balloon rides, sky diving, quad biking, horse riding and much more",
+    "image": "/images/relax.jpg"
+  },
+  {
+    "title": "Local Culture",
+    "description": "Opportunities for adventure are limitless. Hot air balloon rides, sky diving, quad biking, horse riding and much more",
+    "image": "/images/local-culture.jpg"
+  }
+]

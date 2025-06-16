@@ -1,0 +1,51 @@
+[
+  {
+    "image": "luxuryImg.png",
+    "title": "Luxury Double",
+    "price": "400",
+    "bed": "1 King Size Bed",
+    "people": "2 persons"
+  },
+  {
+    "image": "premiumImg.png",
+    "title": "Premium Double",
+    "price": "400",
+    "bed": "1 King Size Bed",
+    "people": "2 persons"
+  },
+  {
+    "image": "standardImg.png",
+    "title": "Standard Double",
+    "price": "400",
+    "bed": "1 Double Bed",
+    "people": "2 persons"
+  },
+  {
+    "image": "mountainsuiteImg.png",
+    "title": "Mountain Suite",
+    "price": "350",
+    "bed": "1 Double Bed + 1 Single",
+    "people": "3 persons"
+  },
+  {
+    "image": "twinsuiteImg.png",
+    "title": "Twin Suite",
+    "price": "550",
+    "bed": "2 King Size Bed",
+    "people": "4 persons"
+  },
+  {
+    "image": "premiumsuiteImg.png",
+    "title": "Premium Suite",
+    "price": "500",
+    "bed": "2 King Size Bed + 2 Single bed",
+    "people": "6 persons"
+  },
+  {
+    "image": "hillsuiteImg.png",
+    "title": "Hill Top Villa",
+    "price": "750",
+    "bed": "2 King Size Bed + 2 Single bed",
+    "people": "6 persons"
+  }
+]
