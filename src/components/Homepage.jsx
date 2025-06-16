@@ -3,8 +3,9 @@ import './Homepage.css';
 import { FaBars, FaTimes } from 'react-icons/fa'; 
 import logo from '../assets/luxtansaresorts.png'
 import imagesData from '../images.json'
-import regImage from '../assets/regImage.png'
+import poolImage from '../assets/regImage.png'
 import roomImage from '../assets/roomImg1.png'
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import rooms from '../rooms.json'; 
 import { imageMap } from '../components/imageMap';
@@ -45,6 +46,20 @@ const Homepage = () => {
 
     const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
 
+    //Explore section
+    const [showDetails, setShowDetails] = useState({
+    rooms: false,
+    resort: false,
+  });
+
+  const navigate = useNavigate();
+
+  const toggleDetails = (section) => {
+    setShowDetails((prev) => ({
+      ...prev,
+      [section]: !prev[section],
+    }));
+  };
     // Carousel Page
     // const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -163,22 +178,49 @@ const Homepage = () => {
             </div>
 
             {/* Explore section */}
-            <section className="second-section">
-                <div className="section-content">
-                    <h1>Explore Luxtansa...!</h1>
-                    <p> Luxtansa provides an exceptional wellness retreat for those 
-                        who want to have deep connection with nature 
-                    </p>
-                     <div className="image-row">
-                        <div className="image-box roomimage">
-                            <img src={roomImage} alt="Rooms" />
-                        </div>
-                        <div className="image-box resortimage">
-                            <img src={regImage} alt="Relaxation" />
-                        </div>
+            <div className="explore-container">
+                <h1 className="explore-title">Explore Luxtansa...!</h1>
+                <p className="explore-subtitle">
+                    Luxtansa provides an exceptional wellness retreat for those who want to have deep connection with nature
+                </p>
+
+                <div className="explore-cards">
+                    <div className="explore-card">
+                    <img src={roomImage} alt="Rooms" className="explore-img" />
+                    <h3>Rooms & Suites</h3>
+                    {showDetails.rooms && (
+                        <p className="explore-details">
+                        Discover our range of luxurious rooms and suites tailored for relaxation and comfort, featuring modern amenities and scenic views.
+                        </p>
+                    )}
+                    <button onClick={() => toggleDetails('rooms')}>
+                        {showDetails.rooms ? 'Less Details' : 'More Details'}
+                    </button>
+                        {showDetails.rooms && (
+                            <button className="navigate-btn" onClick={() => navigate('/services#rooms')}>
+                            Go to Rooms & Suites
+                            </button>
+                        )}
+                    </div>
+                    <div className="explore-card">
+                    <img src={poolImage} alt="Resort" className="explore-img" />
+                    <h3>Resort Facilities</h3>
+                    {showDetails.resort && (
+                        <p className="explore-details">
+                        From our spa and wellness services to the elegant dining and adventure activities, explore what makes Luxtansa a complete destination.
+                        </p>
+                    )}
+                    <button onClick={() => toggleDetails('resort')}>
+                        {showDetails.resort ? 'Less Details' : 'More Details'}
+                    </button>
+                    {showDetails.resort && (
+                        <button className="navigate-btn" onClick={() => navigate('/services')}>
+                        Explore Services
+                        </button>
+                    )}
                     </div>
                 </div>
-            </section>
+            </div>
 
             {/* Carousel section */}
             {/* <section className="third-section"> 
@@ -208,6 +250,7 @@ const Homepage = () => {
                 
                 <div className="homepage-room-cards">
                     {visibleRooms.map((room, i) => (
+                    <Link to="/rooms-and-suites" key={i} className="homepage-room-card-link">    
                     <div className="homepage-room-card" key={i}>
                         <img src={imageMap[room.image]} alt={room.title} />
                         <h3>{room.title}</h3>
@@ -215,6 +258,7 @@ const Homepage = () => {
                         <p><strong>Bed:</strong> {room.bed}</p>
                         <p><strong>People:</strong> {room.people}</p>
                     </div>
+                   </Link>
                     ))}
                 </div>
         
@@ -224,36 +268,38 @@ const Homepage = () => {
 
             {/* Service section  */}
 
-            <div className="service-wrapper">
-                <h2 className="service-title">Our Services</h2>
-                <p className="service-subtitle"> Lorem ipsum dolor sit.</p>
+            <div className="homepage-service-wrapper">
+                <h2 className="homepage-service-title">Our Services</h2>
+                <p className="homepage-service-subtitle"> Lorem ipsum dolor sit.</p>
                 {services.map((service, i) => {
                     const isEven = i % 2 === 1;
 
                     return (
-                    <div key={service.id} className={`service-block ${isEven ? 'reverse' : ''}`}>
-                        <div className="service-images">
+                    <div key={service.id} className={`homepage-service-block ${isEven ? 'reverse' : ''}`}>
+                        <div className="homepage-service-images">
                         <img
                             src={serviceImageMap[service.images[0]]}
                             alt={`${service.title} main`}
-                            className="image-main"
+                            className="homepage-image-main"
                         />
                         <img
                             src={serviceImageMap[service.images[1]]}
                             alt={`${service.title} sub`}
-                            className="image-sub"
+                            className="homepage-image-sub"
                         />
                         </div>
-                        <div className="service-content">
-                        <p className="service-tagline">{service.tagline.toUpperCase()}</p>
-                        <h2 className="service-title">{service.title}</h2>
-                        <p className="service-description">{service.description}</p>
+                        <div className="homepage-service-content">
+                        <p className="homepage-service-tagline">{service.tagline.toUpperCase()}</p>
+                        <h2 className="homepage-service-title">{service.title}</h2>
+                        <p className="homepage-service-description">{service.description}</p>
                         <ul>
                             {service.features.map((f, indx) => (
                             <li key={indx}>{f}</li>
                             ))}
                         </ul>
-                        <button className="service-button">{service.button}</button>
+                        <Link to="/services" onClick={toggleSidebar}>
+                            <button className="homepage-service-button">{service.button}</button>
+                        </Link>
                         </div>
                     </div>
                     );
@@ -271,11 +317,13 @@ const Homepage = () => {
                 </div>
                 <div className="experience-cards">
                     {experiencesData.map((item, index) => (
-                    <div className="experience-card" key={index}>
-                        <img src={item.image} alt={item.title} />
-                        <h3>{item.title}</h3>
-                        <p>{item.description}</p>
-                    </div>
+                        <Link to="/services" onClick={toggleSidebar}>
+                            <div className="experience-card" key={index}>
+                                <img src={item.image} alt={item.title} />
+                                <h3>{item.title}</h3>
+                                <p>{item.description}</p>
+                            </div>
+                        </Link>
                     ))}
                 </div>
                 <button className="experience-button">Explore All Experiences</button>
