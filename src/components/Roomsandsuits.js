@@ -42,6 +42,7 @@ import logo from "../images/luxtansaBgRemoved.png";
 // import garden3 from "../images/garden3.png";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { useState } from "react";
+import Layout from './Layout';
 
 export default function Roomsandsuits() {
 
@@ -339,10 +340,11 @@ const navigate = useNavigate();
 
 
   return (
+    <Layout>
     <div className='page-background'>
 
 
-      <div className="mobile-resp" style={{ display: 'flex', gap: 30, alignItems: 'center', justifyContent: 'space-between', padding: '10px 20px' }}>
+      {/* <div className="mobile-resp" style={{ display: 'flex', gap: 30, alignItems: 'center', justifyContent: 'space-between', padding: '10px 20px' }}>
 
         <div>
           <img src={logo} alt='person' style={{ height: "50px" }} />
@@ -395,7 +397,7 @@ const navigate = useNavigate();
             Contact
           </button>
         </div>
-      </div>
+      </div> */}
 
       <div style={{ textAlign: "center", fontFamily: "serif" }}>
         <br />
@@ -618,7 +620,7 @@ const navigate = useNavigate();
     </div>
   
 {/* Newsletter Section */}
-            <section className="newsletter-section">
+            {/* <section className="newsletter-section">
                 <div className="quote-container">
                 <p className="quote-text">
                 “Travel opens your heart, broadens your mind and fills your life with stories to tell.”
@@ -637,9 +639,9 @@ const navigate = useNavigate();
                     </form>
                 </div>
                 
-            </section>
+            </section> */}
             {/* Footer section*/}
-            <footer className="footer-section">
+            {/* <footer className="footer-section">
                 <div className="footer-content">
                     <div className="footer-left">
                     <div className="footer-block">
@@ -684,10 +686,11 @@ const navigate = useNavigate();
                     </div>
                     </div>
                 </div>
-            </footer>
+            </footer> */}
 
 
       </div>
+      </Layout>
  );
 }
 

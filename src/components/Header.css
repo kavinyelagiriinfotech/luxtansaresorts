@@ -1,0 +1,158 @@
+
+.homepage-header {
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.homepage-container {
+  width: 90%;
+  margin: 0 3%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 70px;
+  width: auto;
+  display: block;   
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 0.5rem 1rem;
+}
+
+.nav a:hover {
+  color: #fff;
+  background: #962E3F;
+  border-radius: 5px;
+}
+
+.booking-button {
+  padding: 0.6rem 1.2rem;
+  background-color: #962E3F !important;
+  color: white !important ;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  z-index: 1002;
+  margin-left: 10px;
+}
+
+.booking-button :hover {
+  background-color: #651c28;
+  z-index: 1002;
+}
+
+.homepage-header{
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav a {
+    margin: 0.5rem 0;
+  }
+
+  .signup-button {
+    margin-top: 1rem;
+    align-self: flex-start;
+  }
+}
+
+.menu-icon {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #962E3F;
+  cursor: pointer;
+  margin-right: 50px;
+  margin-top: 20px;
+  z-index: 1100;
+}
+
+.close-sidebar {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 30vh;
+    width: 50%;
+    background-color: #962E3F;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    transition: right 0.3s ease;
+    z-index: 3;
+    padding-top: 3rem;
+    cursor: pointer;
+  }
+
+  .nav a {
+    color: #fff;
+    background: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  .nav.open {
+    right: 0;
+  }
+
+  .booking-button {
+    padding: 0.6rem 1.2rem;
+    background-color: #962E3F;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+
+  .homepage-container {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.background-image {
+  transition: background-image 1s ease-in-out;
+}
