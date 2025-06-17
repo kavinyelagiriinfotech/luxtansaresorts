@@ -68,7 +68,7 @@ const rooms = [
           "Offers stunning hills view through large panoramic windows, Designed with elegant interiors and modern furnishings for a premium experience."
       },
       {
-        title: "FACILITIES",
+        title: "MORE FACILITIES",
         content: [
           { icon: tv, text: "LCD television" },
           { icon: speaker, text: "Speaker system" },
