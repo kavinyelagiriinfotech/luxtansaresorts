@@ -4,7 +4,6 @@ import Homepage from './components/Homepage';
 import Bookingpage from './components/Bookingpage';
 import ServicesPage from './components/ServicesPage';
 import Roomsandsuits from './components/Roomsandsuits';
-import Header from './components/Header';
 
 
 function App() {
