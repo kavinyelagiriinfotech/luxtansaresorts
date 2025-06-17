@@ -6,8 +6,6 @@ import ServicesPage from './components/ServicesPage';
 import Roomsandsuits from './components/Roomsandsuits';
 import RoomDetail from './components/RoomDetails';
 
-
-
 function App() {
   return (
     <div> 

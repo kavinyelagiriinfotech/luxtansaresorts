@@ -1,7 +1,5 @@
 import React from 'react';
 import './Homepage.css'; 
-import { FaBars, FaTimes } from 'react-icons/fa'; 
-import logo from '../assets/luxtansaresorts.png'
 import imagesData from '../images.json'
 import poolImage from '../assets/regImage.png'
 import roomImage from '../assets/roomImg1.png'
@@ -12,7 +10,6 @@ import { imageMap } from '../components/imageMap';
 import services from '../data/servicesData.json';
 import { serviceImageMap } from './serviceImageMap';
 import experiencesData from "../data/experiences.json";
-import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';  
 import Layout from './Layout';  
@@ -113,32 +110,6 @@ const Homepage = () => {
             <div className='background-image' style={backgroundImage}> 
                 <div className="overlay"></div> 
 
-                {/* <header className="homepage-header">
-                <div className="homepage-container">
-                    <div className="logo">
-                    <a href="#home" alt="Luxtansa logo"><img src={logo} /></a>
-                    </div>
-                    <nav className={`nav ${sidebarOpen ? 'open' : ''}`}>
-                    <a href="#home" onClick={toggleSidebar}>Home</a>
-                    <Link to="/roomsandsuits" onClick={toggleSidebar}>
-                        <a href="/roomsandsuits">Rooms & Suits</a>
-                    </Link>
-                    <Link to="/services" onClick={toggleSidebar}>
-                        <a href="/services" >Services</a>
-                    </Link>
-                    <a href="#contact" onClick={toggleSidebar}>Contact</a>
-                    <Link to="/booking" className="booking-button" onClick={toggleSidebar}>
-                        Book Now
-                    </Link>
-                    <button className="close-sidebar" onClick={toggleSidebar}><FaTimes /></button>
-                    </nav>
-
-                    <button className="menu-icon" onClick={toggleSidebar}>
-                    <FaBars />
-                    </button>
-                </div>
-                </header> */}
-
                 <div className='main-content'>
                     <h1 className='welcome-heading'> Welcome to Luxtansa Resorts</h1>
                     <p> Luxtansa is a wellness resort</p>
@@ -170,7 +141,6 @@ const Homepage = () => {
                         <input type="number" id="children" placeholder="Children" min="0" />
                     </div>
 
-                    {/* <button className="book-button">Book Now</button> */}
                     <Link to="/booking" className="book-button" onClick={toggleSidebar}>
                         Book Now
                     </Link>
@@ -250,15 +220,15 @@ const Homepage = () => {
                 
                 <div className="homepage-room-cards">
                     {visibleRooms.map((room, i) => (
-                    <Link to="/rooms-and-suites" key={i} className="homepage-room-card-link">    
-                    <div className="homepage-room-card" key={i}>
+                    <Link to={`/rooms/${room.id}`} key={i} className="homepage-room-card-link">
+                        <div className="homepage-room-card">
                         <img src={imageMap[room.image]} alt={room.title} />
                         <h3>{room.title}</h3>
                         <p><strong>Price:</strong> ${room.price}</p>
                         <p><strong>Bed:</strong> {room.bed}</p>
                         <p><strong>People:</strong> {room.people}</p>
-                    </div>
-                   </Link>
+                        </div>
+                    </Link>
                     ))}
                 </div>
         
@@ -330,76 +300,6 @@ const Homepage = () => {
                     <button className="experience-button">Explore All Experiences</button>
                 </Link>
             </section>
-
-            {/* Newsletter Section */}
-            {/* <section className="newsletter-section">
-                <div className="quote-container">
-                <p className="quote-text">
-                “Travel opens your heart, broadens your mind and fills your life with stories to tell.”
-                </p>
-                <div className="quote-author">
-                <span className="quote-line" /> Paula Bendfeldt
-                </div>
-                </div>
-                <div className="newsletter-content">
-                    <h2>Receive News and Special Offers</h2>
-                    <p>Sign up to our newsletter to lorem ipsum dolor sit amet!</p>
-                    <form className="newsletter-form">
-                    <input type="text" placeholder="Your name" />
-                    <input type="email" placeholder="Your email" />
-                    <button type="submit">Subscribe</button>
-                    </form>
-                </div>
-            </section> */}
-
-            {/* Footer section*/}
-            {/* <footer className="footer-section">
-                <div className="footer-content">
-                    <div className="footer-left">
-                    <div className="footer-block">
-                        <h4>ADDRESS</h4>
-                        <p>Luxtansa Resorts<br />#city, #State<br />
-                        <span className="footer-link">#locationlink</span>
-                        </p>
-                    </div>
-                    <div className="footer-block">
-                        <h4>CONTACT</h4>
-                        <p>+91-98765-43210 <br />
-                        <a href="mailto:reservations@luxtansareosort.com">reservations@luxtansareosort.com</a>
-                        </p>
-                    </div>
-                    <div className="footer-block">
-                        <h4>FOLLOW US</h4>
-                        <div className="footer-socials">
-                        <a href="#" aria-label="Facebook"><FaFacebookF /></a>
-                        <a href="#" aria-label="Instagram"><FaInstagram /></a>
-                        <a href="#" aria-label="Twitter"><FaTwitter /></a>
-                        </div>
-                    </div>
-                    </div>
-
-                    <div className="footer-right">
-                    <div className="footer-links">
-                        <a href="#rooms">Rooms & Suites</a>
-                        <a href="#services">Services</a>
-                        <a href="#restaurant">Restaurant</a>
-                        <a href="#activities">Activities</a>
-                        <a href="#events">Events</a>
-                        <a href="#about">About us</a>
-                        <a href="#contact">Contact</a>
-                    </div>
-                    <div className="footer-links">
-                        <a href="#newsletter">Newsletter</a>
-                        <a href="#press">Press</a>
-                        <a href="#careers">Careers</a>
-                        <a href="#sanitarymeasures">Sanitary Measures</a>
-                        <a href="#legalnotice">Legal Notice</a>
-                        <a href="#privacypolicy">Privacy Policy</a>
-                        <a href="#cookiespolicy">Cookies Policy</a>
-                    </div>
-                    </div>
-                </div>
-            </footer> */}
         </div>
         </Layout>
   );
