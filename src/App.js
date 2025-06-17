@@ -4,6 +4,7 @@ import Homepage from './components/Homepage';
 import Bookingpage from './components/Bookingpage';
 import ServicesPage from './components/ServicesPage';
 import Roomsandsuits from './components/Roomsandsuits';
+import Header from './components/Header';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Homepage />} />
+          <Route path='/home' element={<Homepage />} />
           <Route path="/booking" element={<Bookingpage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/roomsandsuits" element={<Roomsandsuits />} />

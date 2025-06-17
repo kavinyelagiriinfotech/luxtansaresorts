@@ -40,6 +40,7 @@ import garden2 from "../images/garden2.png";
 import garden3 from "../images/garden3.png";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { useState } from "react";
+import Layout from './Layout';
 
 export default function Roomsandsuits() {
 
@@ -337,10 +338,11 @@ export default function Roomsandsuits() {
 
 
   return (
+    <Layout>
     <div className='page-background'>
 
 
-      <div className="mobile-resp" style={{ display: 'flex', gap: 30, alignItems: 'center', justifyContent: 'space-between', padding: '10px 20px' }}>
+      {/* <div className="mobile-resp" style={{ display: 'flex', gap: 30, alignItems: 'center', justifyContent: 'space-between', padding: '10px 20px' }}>
 
         <div>
           <img src={logo} alt='person' style={{ height: "50px" }} />
@@ -393,7 +395,7 @@ export default function Roomsandsuits() {
             Contact
           </button>
         </div>
-      </div>
+      </div> */}
 
       <div style={{ textAlign: "center", fontFamily: "serif" }}>
         <br />
@@ -545,7 +547,7 @@ export default function Roomsandsuits() {
       </div>
   
 {/* Newsletter Section */}
-            <section className="newsletter-section">
+            {/* <section className="newsletter-section">
                 <div className="quote-container">
                 <p className="quote-text">
                 “Travel opens your heart, broadens your mind and fills your life with stories to tell.”
@@ -564,9 +566,9 @@ export default function Roomsandsuits() {
                     </form>
                 </div>
                 
-            </section>
+            </section> */}
             {/* Footer section*/}
-            <footer className="footer-section">
+            {/* <footer className="footer-section">
                 <div className="footer-content">
                     <div className="footer-left">
                     <div className="footer-block">
@@ -611,10 +613,11 @@ export default function Roomsandsuits() {
                     </div>
                     </div>
                 </div>
-            </footer>
+            </footer> */}
 
 
       </div>
+      </Layout>
  );
 }
 
