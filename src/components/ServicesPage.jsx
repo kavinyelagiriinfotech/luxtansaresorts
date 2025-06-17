@@ -12,6 +12,7 @@ import recreationImage from '../assets/recreation.jpg';
 import entertainmentImage from '../assets/entertainment.jpg';
 import relaxationImage from '../assets/relax.jpg';
 import specializedImage from '../assets/specialized.jpg';
+import Layout from './Layout';
 
 const services = [
   {
@@ -90,6 +91,7 @@ function ServicesPage() {
   const navigate = useNavigate();
 
   return (
+    <Layout >
     <div className="services-page">
       <h1 className="services-title">Our Services</h1>
 
@@ -114,6 +116,7 @@ function ServicesPage() {
         </section>
       ))}
     </div>
+    </Layout>
   );
 }
 

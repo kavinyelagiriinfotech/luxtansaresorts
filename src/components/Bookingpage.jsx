@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Bookingpage.css';
+import Layout from './Layout';
 
 function Bookingpage() {
   const today = new Date().toISOString().split('T')[0];
@@ -16,7 +17,6 @@ function Bookingpage() {
   const [roomType, setRoomType] = useState('');
   const [visitPurpose, setVisitPurpose] = useState('');
   const [arrivalTime, setArrivalTime] = useState('');
-  const [medicalNotes, setMedicalNotes] = useState('');
 
   const handleSubmit = (e) => {
   e.preventDefault();
@@ -28,6 +28,7 @@ function Bookingpage() {
 };
 
   return (
+    <Layout>
     <div className="bookingpage-container">
       <h2 className="bookingpage-title">Complete Your Booking</h2>
       <form className="bookingpage-form" onSubmit={handleSubmit}>
@@ -123,6 +124,7 @@ function Bookingpage() {
         <button type="submit" className="bookingpage-button">Confirm Booking</button>
       </form>
     </div>
+    </Layout>
   );
 }
 
