@@ -9,13 +9,13 @@ import Roomsandsuits from './components/Roomsandsuits';
 function App() {
   return (
     <div> 
-      {/* <Homepage /> */}
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Homepage />} />
           <Route path="/booking" element={<Bookingpage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/roomsandsuits" element={<Roomsandsuits />} />
+          <Route path="/rooms-and-suites" element={<Roomsandsuits />} />
         </Routes>
       </BrowserRouter>
     </div>
