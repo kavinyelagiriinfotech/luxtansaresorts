@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "image": "luxuryImg.png",
     "title": "Luxury Double",
     "price": "400",
@@ -7,6 +8,7 @@
     "people": "2 persons"
   },
   {
+    "id": 2,
     "image": "premiumImg.png",
     "title": "Premium Double",
     "price": "400",
@@ -14,6 +16,7 @@
     "people": "2 persons"
   },
   {
+    "id": 3,
     "image": "standardImg.png",
     "title": "Standard Double",
     "price": "400",
@@ -21,6 +24,7 @@
     "people": "2 persons"
   },
   {
+    "id": 4,
     "image": "mountainsuiteImg.png",
     "title": "Mountain Suite",
     "price": "350",
@@ -28,6 +32,7 @@
     "people": "3 persons"
   },
   {
+    "id": 5,
     "image": "twinsuiteImg.png",
     "title": "Twin Suite",
     "price": "550",
@@ -35,6 +40,7 @@
     "people": "4 persons"
   },
   {
+    "id": 6,
     "image": "premiumsuiteImg.png",
     "title": "Premium Suite",
     "price": "500",
@@ -42,6 +48,7 @@
     "people": "6 persons"
   },
   {
+    "id": 7,
     "image": "hillsuiteImg.png",
     "title": "Hill Top Villa",
     "price": "750",
