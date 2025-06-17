@@ -5,7 +5,7 @@ import Bookingpage from './components/Bookingpage';
 import ServicesPage from './components/ServicesPage';
 import Roomsandsuits from './components/Roomsandsuits';
 import RoomDetail from './components/RoomDetails';
-import Header from './components/Header';
+
 
 
 function App() {
