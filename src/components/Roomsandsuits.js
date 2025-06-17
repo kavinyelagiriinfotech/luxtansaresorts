@@ -470,7 +470,7 @@ export default function Roomsandsuits() {
         <br />
       </div>
 
-        <div className="room-container">
+        {/* <div className="room-container">
         {rooms.map((room, index) => (
           <div key={room.id} className={`room-card room-${index + 1}`}>
             <div className="room-content">
@@ -542,7 +542,68 @@ export default function Roomsandsuits() {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
+
+      <div className="room-container">
+      {rooms.map((room, index) => (
+        <div key={room.id} className={`room-card room-${index + 1}`}>
+          <div className="room-content">
+            <div className="room-image">
+              <img
+                src={selectedImages[index]}
+                alt={room.name}
+                className="main-image"
+              />
+              <div className="thumbnail-row">
+                {room.thumbnails?.map((thumb, i) => (
+                  <img
+                    key={i}
+                    src={thumb}
+                    alt={`Thumbnail ${i + 1}`}
+                    className="thumbnail"
+                    onClick={() => handleThumbnailClick(index, thumb)}
+                  />
+                ))}
+              </div>
+            </div>
+            <div className="room-text">
+              <h2>{room.name}</h2>
+              <ul className="room-info">
+                {room.details.map((detail, i) => (
+                  <li key={i}>
+                    <img src={detail.icon} alt="icon" />
+                    {detail.text}
+                  </li>
+                ))}
+              </ul>
+              <div className="room-sections">
+                {room.tabs.map((tab, tabIndex) => (
+                  <div key={tabIndex}>
+                    <h4 className="section-title">{tab.title}</h4>
+                    {Array.isArray(tab.content) ? (
+                      <ul>
+                        {tab.content.map((item, itemIndex) => (
+                          <li key={itemIndex}>
+                            <img src={item.icon} alt="icon" />
+                            {item.text}
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p>{tab.content}</p>
+                    )}
+                  </div>
+                ))}
+              </div>
+              <div className="button-group">
+                <button className="book-now">BOOK NOW</button>
+                <button className="more-details">MORE DETAILS</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
   
 {/* Newsletter Section */}
             <section className="newsletter-section">
