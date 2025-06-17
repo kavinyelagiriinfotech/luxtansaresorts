@@ -14,12 +14,12 @@ import { serviceImageMap } from './serviceImageMap';
 import experiencesData from "../data/experiences.json";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';    
+import { Link } from 'react-router-dom';  
+import Layout from './Layout';  
 
 
 const Homepage = () => {
     // Home page
-
     const [homecurrentIndex, sethomeCurrentIndex] = useState(0);
 
     useEffect( () => {
@@ -43,7 +43,6 @@ const Homepage = () => {
 
 
     const [sidebarOpen, setSidebarOpen] = useState(false);
-
     const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
 
     //Explore section
@@ -77,7 +76,6 @@ const Homepage = () => {
     // };
 
     // Rooms & suites page
-
     const [index, setIndex] = useState(0);
     const [visibleCount, setVisibleCount] = useState(getVisibleCount());
 
@@ -109,12 +107,13 @@ const Homepage = () => {
             visibleRooms.push(rooms[(index + i) % rooms.length]);
     }
     
-    return (    
+    return ( 
+        <Layout>   
         <div>
             <div className='background-image' style={backgroundImage}> 
                 <div className="overlay"></div> 
 
-                <header className="homepage-header">
+                {/* <header className="homepage-header">
                 <div className="homepage-container">
                     <div className="logo">
                     <a href="#home" alt="Luxtansa logo"><img src={logo} /></a>
@@ -138,7 +137,7 @@ const Homepage = () => {
                     <FaBars />
                     </button>
                 </div>
-                </header>
+                </header> */}
 
                 <div className='main-content'>
                     <h1 className='welcome-heading'> Welcome to Luxtansa Resorts</h1>
@@ -333,7 +332,7 @@ const Homepage = () => {
             </section>
 
             {/* Newsletter Section */}
-            <section className="newsletter-section">
+            {/* <section className="newsletter-section">
                 <div className="quote-container">
                 <p className="quote-text">
                 “Travel opens your heart, broadens your mind and fills your life with stories to tell.”
@@ -351,10 +350,10 @@ const Homepage = () => {
                     <button type="submit">Subscribe</button>
                     </form>
                 </div>
-            </section>
+            </section> */}
 
             {/* Footer section*/}
-            <footer className="footer-section">
+            {/* <footer className="footer-section">
                 <div className="footer-content">
                     <div className="footer-left">
                     <div className="footer-block">
@@ -400,8 +399,9 @@ const Homepage = () => {
                     </div>
                     </div>
                 </div>
-            </footer>
+            </footer> */}
         </div>
+        </Layout>
   );
 };
 
