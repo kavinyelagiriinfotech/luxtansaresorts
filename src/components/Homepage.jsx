@@ -48,18 +48,19 @@ const Homepage = () => {
 
     //Explore section
     const [showDetails, setShowDetails] = useState({
-    rooms: false,
-    resort: false,
-  });
+        rooms: false,
+        resort: false,
+    });
 
-  const navigate = useNavigate();
+    const navigate = useNavigate();
 
-  const toggleDetails = (section) => {
-    setShowDetails((prev) => ({
-      ...prev,
-      [section]: !prev[section],
-    }));
-  };
+    const toggleDetails = (section) => {
+        setShowDetails((prev) => ({
+        ...prev,
+        [section]: !prev[section],
+        }));
+    };
+
     // Carousel Page
     // const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -326,7 +327,9 @@ const Homepage = () => {
                         </Link>
                     ))}
                 </div>
-                <button className="experience-button">Explore All Experiences</button>
+                <Link to="/services" onClick={toggleSidebar}>
+                    <button className="experience-button">Explore All Experiences</button>
+                </Link>
             </section>
 
             {/* Newsletter Section */}
