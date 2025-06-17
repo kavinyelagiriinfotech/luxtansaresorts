@@ -5,13 +5,13 @@ import rooms from '../data/rooms';
 import beachfront from '../images/beachfront-bungalow.jpg';
 import deluxe from "../images/deluxe-suite.jpg";
 import garden from "../images/garden-villa.jpg";
-// import luxury from "./images/Luxury-double.jpg";
+import luxury from "../images/luxury-double.png"
 import mountain from "../images/mountain-cabin.jpg";
 import premium from "../images/premium-double.jpg";
 import skyline from "../images/skyline-penthouse.jpg";
 import group from "../images/group.png";
 import bed from "../images/bedicon.png";
-import logo from "../images/luxtansaBgRemoved.png";
+// import logo from "../images/luxtansaBgRemoved.png";
 import tv from "../images/tv.png";
 import coffee from "../images/coffee.png";
 import bar from "../images/bar.png";
@@ -37,6 +37,9 @@ import premium3 from "../images/premium3.png";
 import skyline1 from "../images/skyline1.png";
 import skyline2 from "../images/skyline2.png";
 import skyline3 from "../images/skyline3.png";
+import hill1 from "../images/hill1.png";
+import hill2 from "../images/hill2.png";
+import hill3 from "../images/hill3.png";
 import garden1 from "../images/garden1.png";
 import garden2 from "../images/garden2.png";
 import garden3 from "../images/garden3.png";
@@ -49,8 +52,8 @@ export default function Roomsandsuits() {
   const rooms = [
     {
       id: 1,
-      name: "Luxury Doubleee",
-      image: beachfront,
+      name: "Luxury Double",
+      image: luxury,
        thumbnails: [luxury1, luxury2, luxury3],
       details: [
         { icon: group, text: "1,500 sq ft / 80 sq m" },
@@ -241,7 +244,7 @@ export default function Roomsandsuits() {
       id: 6,
       name: "HillTop",
       image: hilltop,
-       thumbnails: ["thumb1.jpg", "thumb2.jpg", "thumb3.jpg"],
+       thumbnails: [hill1, hill2, hill3],
       details: [
         { icon: group, text: "1,500 sq ft / 80 sq m" },
         { icon: group, text: "2 persons" },
