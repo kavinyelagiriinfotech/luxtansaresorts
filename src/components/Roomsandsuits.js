@@ -1,4 +1,5 @@
 import './Roomsandsuits.css';
+import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import React from "react";
 import rooms from '../data/rooms';
@@ -319,6 +320,14 @@ export default function Roomsandsuits() {
    
   ]
 
+  
+    const today = new Date().toISOString().split('T')[0];
+    const [checkIn, setCheckIn] = useState(today);
+    const [checkOut, setCheckOut] = useState('');
+    const [adults, setAdults] = useState(1);
+    const [children, setChildren] = useState(0);
+
+
   //  const [activeTab, setActiveTab] = useState('DESCRIPTION');
 const navigate = useNavigate();
    const [selectedImages, setSelectedImages] = useState(
@@ -423,44 +432,44 @@ const navigate = useNavigate();
         backgroundColor: 'lightgray',
         padding: '20px'
       }}>
-        <div>
-          <label>Check in<br />
-            <input type="date" />
+
+        
+        <div className="bookingpage-form-group">
+          <label>Check-in:
+            <input className="bookingpage-input" type="date" min={today} value={checkIn} onChange={(e) => setCheckIn(e.target.value)} required />
           </label>
         </div>
 
-        <div>
-          <label>Check out<br />
-            <input type="date" />
+        <div className="bookingpage-form-group">
+          <label>Check-out:
+            <input className="bookingpage-input" type="date" min={checkIn} value={checkOut} onChange={(e) => setCheckOut(e.target.value)} required />
           </label>
         </div>
 
-        <div>
-          <label>Adults<br />
-            <select>
-              {[1, 2, 3, 4, 5, 6].map(n => <option key={n} value={n}> {n} </option>)}
-            </select>
+       <div className="bookingpage-form-group">
+          <label>Adults:
+            <input className="bookingpage-input" type="number" min="1" value={adults} onChange={(e) => setAdults(e.target.value)} required />
           </label>
         </div>
 
-        <div>
-          <label>Children<br />
-            <select>
-              {[0, 1, 2, 3, 4, 5].map(n => <option key={n} value={n}>{n}</option>)}
-            </select>
+        <div className="bookingpage-form-group">
+          <label>Children:
+            <input className="bookingpage-input" type="number" min="0" value={children} onChange={(e) => setChildren(e.target.value)} />
           </label>
         </div>
 
-        <button style={{
-          backgroundColor: '#962E3F',
-          color: 'white',
-          padding: '10px 20px',
-          border: 'none',
-          cursor: 'pointer',
-          fontWeight: 'bold'
-        }}>
-          BOOK NOW
-        </button>
+       <Link to="/booking" className="book-button">
+  <button style={{
+    backgroundColor: '#962E3F',
+    color: 'white',
+    padding: '10px 20px',
+    border: 'none',
+    cursor: 'pointer',
+    fontWeight: 'bold'
+  }}>
+    BOOK NOW
+  </button>
+</Link>
       </div>
 
       <div style={{ textAlign: "center", backgroundColor: "white", opacity: "0.6" }}>
