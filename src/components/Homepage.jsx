@@ -141,7 +141,7 @@ const Homepage = () => {
                         <input type="number" id="children" placeholder="Children" min="0" />
                     </div>
 
-                    <Link to="/booking" className="book-button" onClick={toggleSidebar}>
+                    <Link to="/booking" className="book-button">
                         Book Now
                     </Link>
                 </div>
