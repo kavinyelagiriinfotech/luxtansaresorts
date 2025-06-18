@@ -319,9 +319,10 @@
 /* Button group */
 .button-group {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   margin-top: 1.5rem;
 }
+
 .book-now, .more-details {
   padding: 10px 20px;
   font-weight: bold;
@@ -330,13 +331,13 @@
   transition: 0.3s ease;
   border: none;
 }
-.book-now {
+/* .book-now {
   background-color: #962E3F;
   color: white;
 }
 .book-now:hover {
   background-color: #751f30;
-}
+} */
 .more-details {
   background-color: transparent;
   color: #962E3F;

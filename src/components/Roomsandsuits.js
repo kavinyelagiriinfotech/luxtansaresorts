@@ -55,7 +55,7 @@ export default function Roomsandsuits() {
       id: 1,
       name: "Luxury Double",
       image: luxury,
-       thumbnails: [luxury1, luxury2, luxury3],
+       thumbnails: [luxury, luxury1, luxury2, luxury3],
       details: [
         { icon: group, text: "1,500 sq ft / 80 sq m" },
         { icon: group, text: "2 persons" },
@@ -93,7 +93,7 @@ export default function Roomsandsuits() {
       id: 2,
       name: "Deluxe Suite",
       image: deluxe,
-       thumbnails: [deluxe1, deluxe2, deluxe3],
+       thumbnails: [deluxe, deluxe1, deluxe2, deluxe3],
       details: [
         { icon: group, text: "1,500 sq ft / 80 sq m" },
         { icon: group, text: "2 persons" },
@@ -131,7 +131,7 @@ export default function Roomsandsuits() {
       id: 3,
       name: "Mount Cabin",
       image: mountain,
-       thumbnails: [mount1, mount2, mount3],
+       thumbnails: [mountain, mount1, mount2, mount3],
       details: [
         { icon: group, text: "1,500 sq ft / 80 sq m" },
         { icon: group, text: "2 persons" },
@@ -169,7 +169,7 @@ export default function Roomsandsuits() {
       id: 4,
       name: "Premium Double",
       image: premium,
-       thumbnails: [premium1, premium2, premium3],
+       thumbnails: [premium, premium1, premium2, premium3],
       details: [
         { icon: group, text: "1,500 sq ft / 80 sq m" },
         { icon: group, text: "2 persons" },
@@ -207,7 +207,7 @@ export default function Roomsandsuits() {
       id: 5,
       name: "Skyline Penthouse",
       image: skyline,
-       thumbnails: [skyline1, skyline2, skyline3],
+       thumbnails: [skyline, skyline1, skyline2, skyline3],
       details: [
         { icon: group, text: "1,500 sq ft / 80 sq m" },
         { icon: group, text: "2 persons" },
@@ -245,7 +245,7 @@ export default function Roomsandsuits() {
       id: 6,
       name: "HillTop",
       image: hilltop,
-       thumbnails: [hill1, hill2, hill3],
+       thumbnails: [hilltop, hill1, hill2, hill3],
       details: [
         { icon: group, text: "1,500 sq ft / 80 sq m" },
         { icon: group, text: "2 persons" },
@@ -283,7 +283,7 @@ export default function Roomsandsuits() {
       id: 7,
       name: "Garden Villa",
       image: garden,
-       thumbnails: [garden1, garden2, garden3],
+       thumbnails: [garden, garden1, garden2, garden3],
       details: [
         { icon: group, text: "1,500 sq ft / 80 sq m" },
         { icon: group, text: "2 persons" },
@@ -326,6 +326,9 @@ export default function Roomsandsuits() {
     const [checkOut, setCheckOut] = useState('');
     const [adults, setAdults] = useState(1);
     const [children, setChildren] = useState(0);
+
+      const [sidebarOpen, setSidebarOpen] = useState(false);
+      const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
 
 
   //  const [activeTab, setActiveTab] = useState('DESCRIPTION');
@@ -458,18 +461,25 @@ const navigate = useNavigate();
           </label>
         </div>
 
-       <Link to="/booking" className="book-button">
+       {/* <Link to="/booking" className="book-button">
   <button style={{
-    backgroundColor: '#962E3F',
-    color: 'white',
-    padding: '10px 20px',
-    border: 'none',
-    cursor: 'pointer',
-    fontWeight: 'bold'
+    // backgroundColor: '#962E3F',
+    // color: 'white',
+    // padding: '10px 20px',
+    // border: 'none',
+    // cursor: 'pointer',
+    // fontWeight: 'bold'
   }}>
     BOOK NOW
   </button>
-</Link>
+</Link> */}
+
+
+<button className="book-now"
+  onClick={() => navigate(`/booking`)}
+>
+  BOOK NOW
+</button>
       </div>
 
       <div style={{ textAlign: "center", backgroundColor: "white", opacity: "0.6" }}>
@@ -615,9 +625,12 @@ const navigate = useNavigate();
                 ))}
               </div>
               <div className="button-group">
-                <button className="book-now">BOOK NOW</button>
-                <button
-  className="more-details"
+            <button className="more-details"
+  onClick={() => navigate(`/booking`)}
+>
+  BOOK NOW
+</button>
+   <button  className="more-details"
   onClick={() => navigate(`/rooms/${room.id}`)}
 >
   MORE DETAILS
@@ -627,7 +640,8 @@ const navigate = useNavigate();
               </div>
             </div>
           </div>
-        </div>
+          </div>
+        
       ))}
     </div>
   
