@@ -43,7 +43,6 @@ import garden1 from "../images/garden1.png";
 import garden2 from "../images/garden2.png";
 import garden3 from "../images/garden3.png";
 
-// Define room array (copy-paste your existing array from inside Roomsandsuits)
 const rooms = [
   {
     id: 1,
@@ -352,5 +351,4 @@ const rooms = [
 
 ];
 
-// Export only the rooms array
 export default rooms;

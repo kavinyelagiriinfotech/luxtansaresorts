@@ -115,7 +115,7 @@ function ServicesPage() {
               className="details-button"
               onClick={() => navigate(service.link)}
             >
-              More Details →
+              More Details
             </button>
           </div>
         </section>
