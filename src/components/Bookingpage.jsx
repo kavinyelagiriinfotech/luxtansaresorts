@@ -28,7 +28,7 @@ function Bookingpage() {
     fullName, email, phone, checkIn, checkOut, rooms, adults, children,
     specialRequests, locationFrom, roomType, visitPurpose, arrivalTime
   });
-  alert("Booking Submitted Successfully");
+  alert("Booking Submitted Successfully"); //Temperory
 };
 
   return (
