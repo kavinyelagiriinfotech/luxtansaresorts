@@ -1,5 +1,5 @@
 import Layout from './Layout';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import rooms from '../data/rooms';
 import './RoomDetails.css'; // Make sure this path is correct
@@ -8,6 +8,10 @@ export default function RoomDetails() {
   const { id } = useParams();
   const room = rooms.find((r) => r.id === parseInt(id));
   const [imageIndex, setImageIndex] = useState(0);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (!room) {
     return <h2 style={{ padding: '2rem' }}>Room not found.</h2>;

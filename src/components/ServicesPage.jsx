@@ -1,6 +1,7 @@
 import React from 'react';
 import './ServicesPage.css';
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 import roomsImage from '../assets/roomImg1.png';
 import spaImage from '../assets/spa2.jpg';
@@ -88,9 +89,12 @@ const services = [
 ];
 
 function ServicesPage() {
-  const navigate = useNavigate();
+    const navigate = useNavigate();
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
 
-  return (
+    return (
     <Layout >
     <div className="services-page">
       <h1 className="services-title">Our Services</h1>
