@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Bookingpage.css';
 import Layout from './Layout';
 
@@ -17,6 +17,10 @@ function Bookingpage() {
   const [roomType, setRoomType] = useState('');
   const [visitPurpose, setVisitPurpose] = useState('');
   const [arrivalTime, setArrivalTime] = useState('');
+
+  useEffect(() => {
+        window.scrollTo(0, 0);
+  }, []);
 
   const handleSubmit = (e) => {
   e.preventDefault();

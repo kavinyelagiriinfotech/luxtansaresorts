@@ -90,7 +90,7 @@ const rooms = [
   },
   {
       id: 2,
-      name: "Deluxe Suite",
+      name: "Premium Double",
       images: [deluxe, deluxe1, deluxe2],
        thumbnails: [deluxe1, deluxe2, deluxe3],
       details: [
@@ -134,7 +134,7 @@ const rooms = [
     },
     {
       id: 3,
-      name: "Mount Cabin",
+      name: "Standard Double",
       images: [mountain, mount1, mount2],
        thumbnails: [mount1, mount2, mount3],
       details: [
@@ -177,7 +177,7 @@ const rooms = [
     },
     {
       id: 4,
-      name: "Premium Double",
+      name: "Mountain Suite",
       images: [premium, premium1, premium2],
        thumbnails: [premium1, premium2, premium3],
       details: [
@@ -220,7 +220,7 @@ const rooms = [
     },
     {
       id: 5,
-      name: "Skyline Penthouse",
+      name: "Twin Suite",
       images: [skyline, skyline1, skyline2],
        thumbnails: [skyline1, skyline2, skyline3],
       details: [
@@ -264,7 +264,7 @@ const rooms = [
     },
     {
       id: 6,
-      name: "HillTop",
+      name: "Premium Suite",
       images: [hilltop, hill1, hill2],
        thumbnails: ["thumb1.jpg", "thumb2.jpg", "thumb3.jpg"],
       details: [
@@ -307,7 +307,7 @@ const rooms = [
     },
     {
       id: 7,
-      name: "Garden Villa",
+      name: "Hill Top Villa",
       images: [garden, garden1, garden2],
        thumbnails: [garden1, garden2, garden3],
       details: [
