@@ -28,10 +28,6 @@
   flex-direction: row-reverse;
 }
 
-.service-section:hover {
-  transform: scale(1.01);
-}
-
 .service-content {
   display: flex;
   align-items: center;
@@ -84,6 +80,7 @@
   border-radius: 12px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
+  border: 10px solid white;
 }
 
 .service-image-wrapper img:hover {
